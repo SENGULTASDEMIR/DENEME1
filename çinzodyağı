@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class çinzodyağı {
+    public static void main(String[] args) {
+        int yıl,kalan,bölüm;
+        String burç="";
+        boolean isError = false;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Doğdunuz Yılı Giriniz:");
+        yıl = input.nextInt();
+
+
+        bölüm=(yıl/12);
+        kalan=yıl-bölüm*12;
+        
+
+
+        if (yıl > 0 && yıl < 2023) {
+          if(kalan<=0 && kalan<=11){
+            if(kalan==0){
+                burç="Maymun";
+            } else if(kalan==1) {
+                burç = "Horoz";
+            } else if(kalan==2) {
+                burç = "Köpek";
+            } else if(kalan==3) {
+                burç = "Domuz";
+            } else if(kalan==4) {
+                burç = "Fare";
+            } else if(kalan==5) {
+                burç = "Öküz";
+            } else if(kalan==6) {
+                burç = "Kaplan";
+            } else if(kalan==7) {
+                burç = "Tavşan";
+            } else if(kalan==8) {
+                burç = "Ejderha";
+            } else if(kalan==9) {
+                burç = "Yılan";
+            } else if(kalan==10) {
+                burç = "At";
+            } else if(kalan==11) {
+                burç = "Koyun";
+            } else {
+                isError = true;
+            }
+          } else {
+              isError = true;
+          }
+
+            System.out.println(isError ? "Hatalı giriş yaptınız, tekrar deneyiniz!" : "Çin Zoydağı Burcunuz: " + burç);
+
+        }
+            }
+
+        }
+
